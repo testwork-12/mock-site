@@ -1,0 +1,30 @@
+<div class="data-container">
+	<div class="table-header">
+		<h2>Hero List</h2>
+		<button (click)="redirectToHeroCreation()" *ngIf="authService.isEditor()" class="btn-add" role="button">
+			<span class="txt-btn-add"><b>NEW HERO</b></span>
+			<svg class="add-icon"><use href="assets/icons/icons-modification.svg#icon-add"></use></svg>
+		</button>
+	</div>
+	<table *ngIf="heroListObservable | async as heroList; else loading" id="heroes">
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th *ngIf="authService.isEditor()"></th>
+		</tr>
+		<tr *ngFor="let hero of heroList">
+			<td>{{ hero.id }}</td>
+			<td>{{ hero.name }}</td>
+			<td *ngIf="authService.isEditor()" class="match-content">
+				<button (click)="redirectToHeroEdition(hero.id)" class="btn-modif">
+					<svg class="modification-icon edit-icon">
+						<use href="assets/icons/icons-modification.svg#icon-edit"></use>
+					</svg>
+				</button>
+			</td>
+		</tr>
+	</table>
+	<ng-template #loading>
+		<div class="loading"><img class="loading" alt="Loading..." ngSrc="assets/images/loading.gif" height="192" width="193"></div>
+	</ng-template>
+</div>

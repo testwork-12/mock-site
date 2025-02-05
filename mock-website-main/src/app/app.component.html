@@ -1,0 +1,23 @@
+<header class="top-div">
+	<ul class="top-nav">
+		<li class="logo">
+			<a class="inline accumalux-logo" href="#">
+				<img alt="Accumalux Group" class="menu-icon" src="assets/images/accumalux-logo-transparent.png"/>
+			</a>
+		</li>
+		<li class="title">
+			<h1 class="inline">{{ smallTitle }}</h1>
+		</li>
+		<li class="login">
+			<a (click)="authService.login()" *ngIf="!isAuthenticated" class="connection inline">
+				Log In
+			</a>
+			<a (click)="authService.logout()" *ngIf="isAuthenticated" class="connection logout inline">
+				Log Out
+			</a>
+		</li>
+	</ul>
+</header>
+<div class="content">
+	<router-outlet></router-outlet>
+</div>

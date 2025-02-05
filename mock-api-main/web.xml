@@ -1,0 +1,8 @@
+<filter>
+	<filter-name>simpleCorsFilter</filter-name>
+	<filter-class>com.mock_api.config.SimpleCorsFilter</filter-class>
+	<filter-mapping>
+		<filter-name>simpleCorsFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+</filter>

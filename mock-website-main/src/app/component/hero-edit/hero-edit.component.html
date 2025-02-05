@@ -1,0 +1,36 @@
+<div class="data-container">
+	<form name="editHero">
+		<div class="form-title">
+			<h2>Edit hero : {{ heroId }}</h2>
+		</div>
+		<div class="form-content" *ngIf="heroObservable | async as hero; else loading;">
+			<div class="has-float-label">
+				<label class="has-float-label" for="heroEdit">Name</label>
+				<input [(ngModel)]="hero.name" class="form-control" id="heroEdit" name="hero" required type="text"/>
+			</div>
+			<div class="form-buttons">
+				<button (click)="deleteHero(hero.id);" class="btn-delete">
+					Delete hero
+					<svg class="delete-icon">
+						<use href="assets/icons/icons-modification.svg#icon-delete"></use>
+					</svg>
+				</button>
+				<button (click)="editHero(hero);" class="btn-validate">
+					Validate edition
+					<svg class="validate-icon">
+						<use href="assets/icons/icons-modification.svg#icon-validate"></use>
+					</svg>
+				</button>
+				<button (click)="redirectToListView();" class="btn-cancel">
+					Cancel
+					<svg class="cancel-icon">
+						<use href="assets/icons/icons-modification.svg#icon-cancel"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<ng-template #loading>
+			<div class="loading"><img alt="Loading..." ngSrc="assets/images/loading.gif" height="192" width="193"></div>
+		</ng-template>
+	</form>
+</div>

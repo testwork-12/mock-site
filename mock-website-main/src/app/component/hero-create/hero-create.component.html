@@ -1,0 +1,27 @@
+<div class="data-container">
+	<form name="createHero">
+		<div class="form-title">
+			<h2>Create hero</h2>
+		</div>
+		<div class="form-content">
+			<div class="has-float-label">
+				<label class="has-float-label" for="heroCreate">Name</label>
+				<input [(ngModel)]="hero.name" class="form-control" id="heroCreate" name="hero" required type="text"/>
+			</div>
+			<div class="form-buttons">
+				<button (click)="createHero(hero);" class="btn-validate">
+					Validate
+					<svg class="validate-icon">
+						<use href="assets/icons/icons-modification.svg#icon-validate"></use>
+					</svg>
+				</button>
+				<button (click)="redirectToListView();" class="btn-cancel">
+					Cancel
+					<svg class="cancel-icon">
+						<use href="assets/icons/icons-modification.svg#icon-cancel"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</form>
+</div>

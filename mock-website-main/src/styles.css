@@ -1,0 +1,114 @@
+* {
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+	height: 100%;
+	overflow: auto;
+}
+
+body {
+	min-height: 100%;
+	background-color: #e1e1e1;
+	overflow: auto;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+	height: 2em;
+	border-style: solid;
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+	transition: background 0.5s, border-color 0.5s, color 0.5s, fill 0.5s, stroke 0.5s;
+}
+
+button svg, button img {
+	height: 100%;
+	max-width: 2em;
+}
+
+button.with-text {
+	padding: 0.3em 0.3em 0.3em 0.5em;
+}
+
+div.loading {
+	height: 3rem;
+	width: 3rem;
+}
+
+img.loading {
+	height: 100%;
+	width: 100%;
+}
+
+div.data-container {
+	max-width: 60rem;
+	min-height: calc(100vh - 4rem);
+	margin: 0 auto;
+	padding: 2rem;
+	background: white;
+}
+
+div.form-buttons {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 0.5em;
+	margin: 2rem 0 0 0;
+}
+
+.btn-delete {
+	margin-right: auto;
+	background: transparent;
+	border-color: #85241b;
+	color: #85241b;
+	fill: #85241b;
+	stroke: #85241b;
+}
+
+.btn-delete:hover {
+	background: #85241b;
+	border-color: #85241b;
+	color: white;
+	fill: white;
+	stroke: white;
+}
+
+.btn-validate {
+	background: #1b854c;
+	border-color: #1b854c;
+	color: white;
+	fill: white;
+	stroke: white;
+}
+
+.btn-validate:hover {
+	background: transparent;
+	border-color: #1b854c;
+	color: #1b854c;
+	fill: #1b854c;
+	stroke: #1b854c;
+}
+
+.btn-cancel {
+	background: #4f5959;
+	border-color: #4f5959;
+	color: white;
+	fill: white;
+	stroke: white;
+}
+
+.btn-cancel:hover {
+	background: white;
+	border-color: #4f5959;
+	color: #4f5959;
+	fill: #4f5959;
+	stroke: #4f5959;
+}
+
+div.form-title {
+	margin-bottom: 2rem;
+}
