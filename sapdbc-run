@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile="C:/Program Files/SAP/com.sap.sdb.tools.library_7.9.10.v201908071617/lib/sapdbc.jar" -DgroupId=com.sap -DartifactId=sapdbc -Dversion=7.9.10 -Dpackaging=sapdbc
